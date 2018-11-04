@@ -20,8 +20,10 @@ import com.example.napat.myapplication.R
 import com.example.napat.myapplication.castomer.constuer.Conteck
 import com.example.napat.myapplication.castomer.constuer.GetFM
 import com.example.napat.myapplication.castomer.presenter.ViewDialog
+import kotlinx.android.synthetic.main.action_bar.*
 import kotlinx.android.synthetic.main.dialog_rateing.*
 import kotlinx.android.synthetic.main.fragment_blank.*
+import kotlinx.android.synthetic.main.fragment_page.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,6 +47,9 @@ class DetailWorkerReady(val main:HomeCustomer) : Fragment() {
     @SuppressLint("InflateParams")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        main.setSupportActionBar(toolbar)
+        main.supportActionBar?.setDisplayShowTitleEnabled(false)
+        tv_toolbar_title.text = "Service"
         compleat.setOnClickListener {
             viewDialog = ViewDialog(main)
             viewDialog?.showDialogRateing()

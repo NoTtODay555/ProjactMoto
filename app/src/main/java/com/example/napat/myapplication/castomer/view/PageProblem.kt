@@ -114,6 +114,7 @@ class Page (val main:HomeCustomer): Fragment(), OnMapReadyCallback, ConteckView.
             callData.getDataUser(databaseReference,fireBaseAuth)
             viewDialog = ViewDialog(main)
             viewDialog?.showDialog()
+
         }
 
     }

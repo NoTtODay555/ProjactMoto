@@ -1,20 +1,20 @@
-package com.example.napat.myapplication.worker.view
+package com.example.napat.myapplication.worker.view.main
 
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
 import com.example.napat.myapplication.R
 import com.example.napat.myapplication.castomer.constuer.Contact
-import com.example.napat.myapplication.database.All
 import com.example.napat.myapplication.database.Errors
 import com.example.napat.myapplication.worker.constuer.CallError
+import com.example.napat.myapplication.worker.view.HomeWorker
+import com.example.napat.myapplication.worker.view.workConstuView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_list_work.*
@@ -29,7 +29,7 @@ private const val ARG_PARAM2 = "param2"
  * A simple [Fragment] subclass.
  *
  */
-class ListWork (val worker: HomeWorker): Fragment() ,workConstuView {
+class ListWork (val worker: HomeWorker): Fragment() , workConstuView {
 
 
     private val fireBaseAuth = FirebaseAuth.getInstance()!!

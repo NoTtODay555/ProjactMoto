@@ -1,12 +1,12 @@
-package com.example.napat.myapplication.worker.view
+package com.example.napat.myapplication.worker.view.main
 
 import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.napat.myapplication.R
-import com.example.napat.myapplication.database.All
 import com.example.napat.myapplication.database.Errors
+import com.example.napat.myapplication.worker.view.HomeWorker
 
 class RecycleView(val worker: HomeWorker, private var error: Errors?): RecyclerView.Adapter<ViewHolder>() {
 

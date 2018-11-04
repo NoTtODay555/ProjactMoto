@@ -17,7 +17,7 @@ class HomeCustomersButton : AppCompatActivity(), View.OnClickListener {
             }
             btOilOut -> {
                 this.finish()
-                val x ="OilOut"
+                val x ="Oil"
                 this.startActivity(Intent(this, HomeCustomer:: class.java).putExtra("test",x))
             }
             btBrokenTired -> {

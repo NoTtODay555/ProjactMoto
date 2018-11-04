@@ -1,4 +1,4 @@
-package com.example.napat.myapplication.worker.view
+package com.example.napat.myapplication.worker.view.main
 
 
 import android.annotation.SuppressLint
@@ -12,7 +12,10 @@ import com.example.napat.myapplication.R
 import com.example.napat.myapplication.castomer.constuer.Contact
 import com.example.napat.myapplication.castomer.constuer.GetFMWorker
 import com.example.napat.myapplication.database.All
+import com.example.napat.myapplication.worker.view.HomeWorker
+import kotlinx.android.synthetic.main.action_bar.*
 import kotlinx.android.synthetic.main.fragment_list_detail.*
+import kotlinx.android.synthetic.main.fragment_page.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,15 +39,18 @@ class ListDetail(private val list : All, val worker: HomeWorker) : Fragment() {
         tv_id.text = list.username
         tv_problem.text = list.proplams
         tv_tell.text = list.tel
-        bt_return.setOnClickListener {
-            val list = ListWork.newInstance(worker)
-            getFM.openFragment(list)
-        }
+//        bt_return.setOnClickListener {
+//            val list = ListWork.newInstance(worker)
+//            getFM.openFragment(list)
+//        }
+        worker.setSupportActionBar(toolbar)
+        worker.supportActionBar?.setDisplayShowTitleEnabled(false)
+        tv_toolbar_title.text = "Job"
         super.onViewCreated(view, savedInstanceState)
     }
 
     companion object {
-        fun newInstance(list : All,worker: HomeWorker): ListDetail = ListDetail(list,worker)
+        fun newInstance(list : All,worker: HomeWorker): ListDetail = ListDetail(list, worker)
     }
 
 

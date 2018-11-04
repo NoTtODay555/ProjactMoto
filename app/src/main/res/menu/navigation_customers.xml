@@ -13,12 +13,12 @@
         android:id="@+id/navigation_serview_customer"
         android:enabled="true"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_action_profile_customer"
-        android:title="@string/title_notifications" />
+        android:icon="@drawable/ic_action_servie_customer"
+        android:title="Service" />
     <item
         android:id="@+id/navigation_logout_customer"
         android:enabled="true"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_action_profile_customer"
-        android:title="@string/title_notifications" />
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        android:title="Exit"/>
 </menu>

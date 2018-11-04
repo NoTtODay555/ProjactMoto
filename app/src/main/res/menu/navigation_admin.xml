@@ -9,8 +9,6 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="@string/title_home" />
 
-
-
     <item
         android:id="@+id/navigation_worker_admin"
         android:enabled="true"
@@ -20,6 +18,13 @@
 
     <item
         android:id="@+id/navigation_status_admin"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_audiotrack_dark"
+        android:title="@string/title_notifications" />
+
+    <item
+        android:id="@+id/navigation_logout_admin"
         android:enabled="true"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_audiotrack_dark"

@@ -38,10 +38,10 @@ class DetailAdminlist(val list : All,val worker: HomeAdmin) : Fragment() {
         tv_id.text = list.username
         tv_problem.text = list.proplams
         tv_tell.text = list.tel
-        bt_return.setOnClickListener {
-            val list = ListWorkAdmins.newInstance(worker)
-            getFmAdmin.openFragment(list)
-        }
+//        bt_return.setOnClickListener {
+//            val list = ListWorkAdmins.newInstance(worker)
+//            getFmAdmin.openFragment(list)
+//        }
         super.onViewCreated(view, savedInstanceState)
     }
     companion object {
