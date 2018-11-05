@@ -52,11 +52,13 @@ class ProfileActivity : AppCompatActivity() , View.OnClickListener{
         val name: String = editTextName.text.toString().trim()
         val address: String = editTextAddress.text.toString().trim()
         val userInformation = UserInformation(name, address, null, "Customer")
+        val x = arrayListOf<UserInformation>()
+
         Log.e("check user", userInformation.toString())
 
 
         user.uid.run {
-            databaseReference.child("user").child(this).setValue(userInformation)
+            databaseReference.child("user").child("costumer").setValue(userInformation)
             val a = databaseReference.child("user").child(this)
             Toast.makeText(this@ProfileActivity,a.toString(),Toast.LENGTH_LONG).show()
         }

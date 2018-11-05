@@ -8,23 +8,10 @@
     android:orientation="vertical"
     android:gravity="center|top"
     android:background="#625757"
-
     tools:context=".admin.view.view.workerSec.MainAdmin">
-
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/im_profileCreat"
-        android:layout_width="93dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="@string/todo"
-        android:src="@mipmap/ic_launcher_moter_round"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+    <include layout="@layout/action_bar" />
 
     <TextView
         android:id="@+id/textView45"
@@ -36,13 +23,12 @@
         android:text="@string/work"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/im_profileCreat" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView_worker_detail"
         android:layout_width="340dp"
-        android:layout_height="203dp"
+        android:layout_height="278dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"

@@ -8,9 +8,9 @@ import com.example.napat.myapplication.admin.view.view.HomeAdmin
 import com.example.napat.myapplication.admin.view.view.allError.ViewAdminHolder
 import com.example.napat.myapplication.database.Errors
 
-class RecycleAdminWorker (val worker: HomeAdmin, private var error: Errors?): RecyclerView.Adapter<ViewAdminWorkerHolder>(){
+class RecycleAdminWorkers (val worker: HomeAdmin, private var error: Errors?): RecyclerView.Adapter<ViewAdminWorkerHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewAdminWorkerHolder {
-        return ViewAdminWorkerHolder(LayoutInflater.from(parent.context).inflate(R.layout.cradhistory, parent, false), worker)
+        return ViewAdminWorkerHolder(LayoutInflater.from(parent.context).inflate(R.layout.crad_id_worker, parent, false), worker)
     }
 
     override fun getItemCount(): Int {

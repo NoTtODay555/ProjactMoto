@@ -9,4 +9,7 @@ interface PresenterAdmin {
     interface List{
         fun getDataAdminError(databaseReference: DatabaseReference, fireBaseAuth : FirebaseAuth)
     }
+    interface ListUser{
+        fun getDataUserAll(databaseReference: DatabaseReference, fireBaseAuth : FirebaseAuth)
+    }
 }

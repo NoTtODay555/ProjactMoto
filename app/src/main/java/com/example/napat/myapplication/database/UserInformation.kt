@@ -5,6 +5,9 @@ import android.os.Parcelable
 import com.example.napat.myapplication.castomer.view.ConteckView
 import java.util.*
 
+data class UserInformationAll(
+        val listAll: ArrayList<UserInformation> = arrayListOf()
+)
 data class UserInformation (
     val name : String? = "",
     val address : String? = "",

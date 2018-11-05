@@ -23,7 +23,7 @@ class CallData(var userlogin : PresenterView.UserLogin) : PresenterIF.GetClass {
                 if (dataSnapshot.exists()) {
                     val proflie = dataSnapshot.getValue(UserInformation::class.java)
                     Log.e("test",proflie.toString())
-                    proflie!!.levels?.let { userlogin.userclass(it) }
+                    proflie!!.levels?.let { userlogin.userclass(it,fireBaseAuth,databaseReference,user) }
                 }
             }
         }

@@ -2,7 +2,7 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:cardview="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto">
     <android.support.v7.widget.CardView
@@ -11,23 +11,27 @@
         android:layout_height="wrap_content"
         card_view:cardBackgroundColor="@color/clolorBg"
         card_view:cardCornerRadius="6dp">
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="end">
 
             <LinearLayout
-                android:layout_width="195dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp">
+                android:id="@+id/linearLayout4"
+                android:layout_width="192dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                card_view:layout_constraintEnd_toStartOf="@+id/edit_profile"
+                card_view:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
                     android:text="ID :"
-                    android:textSize="30dp" />
+                    android:textSize="20dp" />
 
                 <TextView
                     android:id="@+id/name_worker"
@@ -36,20 +40,27 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:text="Jonh"
-                    android:textSize="30dp" />
+                    android:textSize="20dp" />
+
             </LinearLayout>
+
             <Button
                 android:id="@+id/edit_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="edit"/>
+                android:layout_marginEnd="8dp"
+                android:text="edit"
+                card_view:layout_constraintEnd_toStartOf="@+id/history_worker" />
+
             <Button
                 android:id="@+id/history_worker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="histor"/>
+                android:layout_marginEnd="8dp"
+                android:text="histor"
+                card_view:layout_constraintEnd_toEndOf="parent" />
 
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
 
     </android.support.v7.widget.CardView>
 

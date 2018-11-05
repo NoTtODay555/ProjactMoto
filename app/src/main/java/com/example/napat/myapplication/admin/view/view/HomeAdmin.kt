@@ -9,6 +9,8 @@ import com.example.napat.myapplication.R
 import com.example.napat.myapplication.admin.view.presenter.GetFmAdmin
 import com.example.napat.myapplication.admin.view.presenter.PresenterAdmin
 import com.example.napat.myapplication.admin.view.view.allError.ListWorkAdmins
+import com.example.napat.myapplication.admin.view.view.customer.customerProfile
+import com.example.napat.myapplication.admin.view.view.job.JobMainAdin
 import com.example.napat.myapplication.admin.view.view.workerSec.MainAdmin
 import com.example.napat.myapplication.castomer.constuer.Conteck
 import com.example.napat.myapplication.castomer.constuer.GetFM
@@ -24,18 +26,18 @@ class HomeAdmin : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home_admin -> {
-                val list = ListWorkAdmins.newInstance(this)
+                val list = JobMainAdin.newInstance(this)
                 getFM.openFragment(list)
                 return@OnNavigationItemSelectedListener true
             }
 
             R.id.navigation_worker_admin -> {
-                val list = MainAdmin.newInstance(this)
+                val list = customerProfile.newInstance(this)
                 getFM.openFragment(list)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_status_admin -> {
-                val list = ListWorkAdmins.newInstance(this)
+                val list = MainAdmin.newInstance(this)
                 getFM.openFragment(list)
                 return@OnNavigationItemSelectedListener true
             }
@@ -52,8 +54,8 @@ class HomeAdmin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_admin)
-        val list = ListWorkAdmins.newInstance(this)
-        getFM.openFragment(list)
         navigation_admin.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        val list = JobMainAdin.newInstance(this)
+        getFM.openFragment(list)
     }
 }

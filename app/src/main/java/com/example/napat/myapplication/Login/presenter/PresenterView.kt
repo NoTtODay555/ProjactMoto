@@ -8,7 +8,7 @@ import com.google.firebase.database.DatabaseReference
 interface PresenterView  {
     interface UserLogin{
         fun userLogin(context: Login, fireBaseAuth : FirebaseAuth, databaseReference : DatabaseReference, user: FirebaseUser?)
-        fun userclass(classs : String )
+        fun userclass(classs : String,fireBaseAuth : FirebaseAuth, databaseReference : DatabaseReference, user: FirebaseUser? )
     }
 
 }

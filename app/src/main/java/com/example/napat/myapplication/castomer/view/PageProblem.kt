@@ -106,9 +106,10 @@ class Page (val main:HomeCustomer): Fragment(), OnMapReadyCallback, ConteckView.
 
 
 
+
+        et_error.text = x
         main.setSupportActionBar(toolbar)
         main.supportActionBar?.setDisplayShowTitleEnabled(false)
-        et_error.text = x
         tv_toolbar_title.text = "Service"
         bt_problem.setOnClickListener {
             callData.getDataUser(databaseReference,fireBaseAuth)

@@ -10,7 +10,7 @@ import com.example.napat.myapplication.database.Errors
 
 class RecycleAdminView(val worker: HomeAdmin, private var error: Errors?): RecyclerView.Adapter<ViewAdminHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewAdminHolder {
-        return ViewAdminHolder(LayoutInflater.from(parent.context).inflate(R.layout.card_list, parent, false), worker)
+        return ViewAdminHolder(LayoutInflater.from(parent.context).inflate(R.layout.crad_id_worker, parent, false), worker)
 
     }
 
